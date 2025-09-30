@@ -297,29 +297,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-
-
-// Simple localStorage-based visitor counter (per browser)
-document.addEventListener("DOMContentLoaded", () => {
-  const counterElement = document.getElementById("visitor-counter");
-  if (counterElement) {
-    let today = new Date().toLocaleDateString();
-
-    // اگر تاریخ تغییر کرده، شمارش صفر شود
-    if (localStorage.getItem("visitDate") !== today) {
-      localStorage.setItem("visitDate", today);
-      localStorage.setItem("visitCount", 0);
-    }
-
-    // شمارش بازدید
-    let count = parseInt(localStorage.getItem("visitCount")) || 0;
-    count++;
-    localStorage.setItem("visitCount", count);
-
-    // نمایش
-    counterElement.innerText = count;
-  }
-});
-
