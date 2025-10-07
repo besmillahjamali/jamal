@@ -302,13 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function getcookie(name) { const value = '; ${document.cookie}'; const parts = value.split(`; ${name}=`); if (parts.length === 2) return parts.pop().split(';').shift(); }
 const savedlang = getcookie("lang");
 let lang = getCookie("lang");
-if (savedlang) { windows.location.href = `/${savedlang}/`; } else fetch('https://ipapi.co/json/')
-    .then(res => res.json())
-    .then(data => {
-        const country = data.country;
-        if (country === 'FR') { window.location.href = '/fr/'; }
-        else if (country === 'AF') { window.location.href = '/FAR/'; }
-        else { window.location.href = '/en/'; }
-    });
+
 function checkCookieAccepted() { const cookieAccepted = getcookie("cookieAccepted"); if (!cookieAccepted) { document.getElementById("cookie-banner").style.display = "block"; } }
 function acceptCookies() { document.cookie = "cookieAccepted=true; max-age=" + 60 * 60 * 24 * 30 + "; path=/"; document.getElementById("cookie-banner").style.display = "none"; }
