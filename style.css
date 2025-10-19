@@ -107,6 +107,7 @@ header {
     transition: background 0.5s ease, border-color 0.5s ease;
     position: relative; 
     z-index: 100;
+    
 }
 
 .logo h1 {
@@ -427,13 +428,77 @@ body.glass-theme .contact-item {
 }
 
 /* --- Footer --- */
+/* --- FOOTER STYLES WITH SOCIAL ICONS --- */
+
 footer {
+    padding: 30px 20px;
+    margin-top: 50px;
     text-align: center;
-    padding: 2rem;
-    background: var(--surface-color);
-    color: var(--secondary-color);
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
-    transition: background 0.5s ease, color 0.5s ease;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-background); /* استفاده از رنگ کارت برای کمی تفاوت با پس‌زمینه اصلی */
+    transition: background-color 0.3s ease;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--text-color-light); /* رنگ کمی روشن‌تر برای حق نشر */
+    margin-top: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-color); /* رنگ پیش‌فرض آیکون‌ها از رنگ متن */
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-flex; /* برای تراز بهتر */
+    padding: 5px; /* برای ناحیه کلیک راحت‌تر */
+}
+
+.social-links a:hover {
+    color: var(--primary-color); /* رنگ اصلی تم برای هاور */
+    transform: scale(1.1);
+}
+
+/* در صورتی که نیاز به رنگ اختصاصی برای هر آیکون دارید (اختیاری) */
+.social-links .fa-linkedin-in:hover {
+    color: #0A66C2;
+}
+
+.social-links .fa-x-twitter:hover {
+    color: #000000; /* در تم تیره، مشکی دیده نمی‌شود، پس از رنگ سفید یا خاکستری تیره استفاده کنید */
+    color: var(--text-color); /* استفاده از رنگ متن برای تم X */
+}
+
+.social-links .fa-instagram:hover {
+    /* گرادیانت اینستاگرام در تم‌های تیره خوب کار نمی‌کند، بهتر است از رنگ ثانویه استفاده کنید */
+    color: #E1306C;
+}
+
+.social-links .fa-telegram-plane:hover {
+    color: #0088CC;
+}
+
+.social-links .fa-facebook-f:hover {
+    color: #1877F2;
+}
+
+.social-links .fa-tiktok:hover {
+    color: #EE1D52;
 }
 
 /* --- Language Switcher --- */
@@ -608,6 +673,676 @@ nav ul li a {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+
+/* --- Blog Section Styles (Grid and Card) --- */
+.welcome-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.blog-category-nav {
+    margin-bottom: 3rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.blog-category-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.blog-category-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+.blog-category-nav ul li a:hover,
+.blog-category-nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--background-color); 
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: -10px;
+    display: block;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+
+
+
+/* --- Crypto Market Page Specific Styles --- */
+.crypto-main-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+    /* Define the layout: 1/3 width for the prices block, 2/3 for the rest on large screens */
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto; /* Two rows */
+}
+
+/* Ensure the Market Overview and Analysis blocks take up their specified area */
+.top-prices-block {
+    grid-column: 1 / 2; /* Left Column */
+    grid-row: 1 / 3; /* Spans both rows (the tall block) */
+}
+
+.market-overview-block {
+    grid-column: 2 / 3; /* Right Column */
+    grid-row: 1 / 2; /* Top-right block */
+}
+
+.analysis-block {
+    grid-column: 2 / 3; /* Right Column */
+    grid-row: 2 / 3; /* Bottom-right block */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .crypto-main-grid {
+        /* On small screens, stack everything into a single column */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .top-prices-block, .market-overview-block, .analysis-block {
+        grid-column: 1 / 1;
+        grid-row: auto;
+    }
+}
+
+
+
+
+/* --- Stock Market Page Specific Styles --- */
+.stocks-main-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+    /* طرح‌بندی سه‌بخشی در دو ردیف:
+       - ردیف 1: Indices (50%) و Forex (50%)
+       - ردیف 2: Analysis (100% عرض)
+    */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto; 
+}
+
+/* شاخص‌ها و فارکس در ردیف بالا قرار می‌گیرند و عرض را تقسیم می‌کنند */
+.major-indices-block {
+    grid-column: 1 / 2; /* ستون اول */
+    grid-row: 1 / 2; /* ردیف اول */
+}
+
+.forex-block-large {
+    grid-column: 2 / 3; /* ستون دوم */
+    grid-row: 1 / 2; /* ردیف اول */
+}
+
+/* تحلیل‌ها در ردیف دوم کل عرض را اشغال می‌کنند */
+.analysis-block-stocks {
+    grid-column: 1 / 3; /* از ستون 1 تا 3 (کل عرض) */
+    grid-row: 2 / 3; /* ردیف دوم */
+}
+
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .stocks-main-grid {
+        /* در صفحه‌های کوچک، همه چیز را در یک ستون قرار دهید */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .major-indices-block, .forex-block-large, .analysis-block-stocks {
+        grid-column: 1 / 1;
+        grid-row: auto;
+    }
+}
+
+
+/* --- Tech News Page Specific Styles --- */
+
+.tech-main-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+    /* طرح‌بندی:
+       - ردیف 1: Featured Story (2/3) و Web Dev Trends (1/3)
+       - ردیف 2: Featured Story (2/3) و Gadgets News (1/3)
+       - ردیف 3: Latest Updates (100% عرض)
+    */
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: auto auto auto; 
+}
+
+/* Featured Story: ستون 1، هر دو سطر را اشغال می‌کند (بلوک بلند سمت چپ) */
+.featured-tech-block {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/* Web Dev Trends: ستون 2، ردیف 1 (بالا-راست) */
+.webdev-trends-block {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+/* Gadgets News: ستون 2، ردیف 2 (پایین-راست) */
+.gadgets-block {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Latest Updates: کل عرض ردیف سوم را اشغال می‌کند */
+.latest-updates-block {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+/* استایل‌های اضافی برای نمایش بهتر مقاله برجسته */
+.large-news-list .large-item h4 {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.latest-updates-block .blog-grid {
+    /* تنظیم این بلوک برای نمایش کارت‌های بلاگ به صورت افقی‌تر */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .tech-main-grid {
+        /* در صفحه‌های کوچک، همه چیز را در یک ستون قرار دهید */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .featured-tech-block, .webdev-trends-block, .gadgets-block, .latest-updates-block {
+        grid-column: 1 / 1;
+        grid-row: auto;
+    }
+}
+
+
+/* --- Renewable Energy Page Specific Styles --- */
+
+.energy-main-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+    /* طرح‌بندی:
+       - ردیف 1 و 2: Deep Dive (2/3) و Trends/Policy (1/3)
+       - ردیف 3: Metrics (100% عرض)
+    */
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: auto auto auto; 
+}
+
+/* Deep Dive: ستون 1، هر دو سطر را اشغال می‌کند (بلوک بلند سمت چپ) */
+.deep-dive-block {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/* Emerging Trends: ستون 2، ردیف 1 (بالا-راست) */
+.emerging-trends-block {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+/* Policy Updates: ستون 2، ردیف 2 (پایین-راست) */
+.policy-updates-block {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Metrics: کل عرض ردیف سوم را اشغال می‌کند */
+.metrics-block {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .energy-main-grid {
+        /* در صفحه‌های کوچک، همه چیز را در یک ستون قرار دهید */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .deep-dive-block, .emerging-trends-block, .policy-updates-block, .metrics-block {
+        grid-column: 1 / 1;
+        grid-row: auto;
+    }
+}
+
+
+/* --- Web Dev Page Specific Styles --- */
+
+.webdev-main-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+    /* طرح‌بندی:
+       - ردیف 1: Frameworks (100% عرض)
+       - ردیف 2: Case Studies (2/3) و Guides (1/3)
+    */
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: auto auto; 
+}
+
+/* Frameworks: کل عرض ردیف اول را اشغال می‌کند */
+.frameworks-block {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+/* Case Studies: ستون 1، ردیف 2 (بلوک بزرگ چپ) */
+.case-studies-block {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+/* Guides: ستون 2، ردیف 2 (بلوک کوچک راست) */
+.guides-block {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* تنظیم برای نمایش کارت‌های بلاگ در بخش frameworks */
+.frameworks-block .blog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .webdev-main-grid {
+        /* در صفحه‌های کوچک، همه چیز را در یک ستون قرار دهید */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .frameworks-block, .case-studies-block, .guides-block {
+        grid-column: 1 / 1;
+        grid-row: auto;
+    }
+}
+
+
+
+
+/* --- Crypto Page Specific Styles --- */
+
+/* بهبود ظاهر آیتم‌های Top 10 */
+.market-block .data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.crypto-item-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--link-hover-color);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%; /* برای اطمینان از اشغال عرض کامل */
+}
+
+
+.price-change.positive {
+  color: #4CAF50; /* Green */
+  font-weight: bold;
+}
+
+.price-change.negative {
+  color: #F44336; /* Red */
+  font-weight: bold;
+}
+
+
+.crypto-item-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.crypto-item-btn .item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.crypto-item-btn .item-data {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.coin-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.price-value {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
+/* --- Modal Styles (پنجره پاپ‌آپ) --- */
+
+.modal {
+    display: none; /* مخفی بودن به طور پیش‌فرض */
+    position: fixed; 
+    z-index: 100; /* بالاتر از همه چیز */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); /* پس‌زمینه نیمه‌شفاف */
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 5% auto; /* 15% از بالا و وسط صفحه */
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 80%; /* عرض مودال */
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(247, 247, 247, 0.5);
+    position: relative;
+    color: var(--text-color);
+}
+
+.close-btn {
+    color: var(--text-color);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+#modal-header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.coin-icon-modal {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.current-price-modal {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--positive-color);
+    margin-left: auto; /* برای بردن قیمت به سمت راست */
+}
+
+/* Timeframe Selector Styles */
+.timeframe-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.timeframe-btn {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-secondary);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+}
+
+.timeframe-btn.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.chart-container {
+    height: 400px; /* فضای کافی برای نمودار */
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#coin-chart {
+    max-height: 100%;
+}
+
+#coin-stats p {
+    margin: 5px 0;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-color);
+}
+
+
+
+
+
+/* --- Trending Items Style --- */
+
+.trending-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px dashed var(--border-color);
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius);
+}
+
+.trending-item:last-child {
+    border-bottom: none; /* حذف خط جداکننده از آیتم آخر */
+}
+
+.trending-item .item-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trending-item .rank {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 0.9em;
+    min-width: 20px;
+    text-align: center;
+}
+
+.coin-icon.small {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+/* --- stock Market Overview Layout (Expanded) --- */
+
+#market-overview {
+    padding: 30px 20px;
+    background-color: var(--background-color);
+}
+
+.overview-grid-container {
+    display: grid;
+    /* 3 Columns: 1 part | 1 part | 1 part */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* سبک دهی به کارت های کلی هر بخش */
+.section-card {
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.section-card h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-align: right; /* جهت دهی راست به چپ */
+}
+
+/* بخش کریپتو/اخبار که دو المان داخل خود دارد */
+.market-summary-section {
+    grid-column: 1 / span 3; /* تمام عرض را در بر می گیرد */
+}
+
+.summary-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* اخبار ۱/۳، نمودار ۲/۳ */
+    gap: 20px;
+}
+
+/* استایل اخبار */
+.news-card {
+    padding: 15px;
+}
+.news-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.news-card p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
+/* استایل کانتینرهای تیکر (برای TradingView) */
+.tickers-container {
+    overflow: hidden; /* جلوگیری از سرریز شدن محتوا */
+    border-radius: var(--border-radius);
+}
+
+/* واکنش‌گرا: روی صفحه‌های کوچک، ستون‌ها زیر هم قرار می‌گیرند */
+@media (max-width: 1200px) {
+    .overview-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 ستون در تبلت */
+    }
+    .market-summary-section {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-grid-container {
+        grid-template-columns: 1fr; /* 1 ستون در موبایل */
+    }
+    .market-summary-section {
+        grid-column: 1;
+    }
+    .summary-content-grid {
+        grid-template-columns: 1fr; /* اخبار و نمودار زیر هم */
+    }
+    /* ارتفاع نمودار را برای موبایل کاهش دهید */
+    #global-market-chart .tradingview-widget-container {
+        height: 200px !important; 
+    }
+    .section-card {
+        padding: 15px;
+    }
+}
+
 
 
 
