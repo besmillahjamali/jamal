@@ -1,3 +1,10 @@
+/**
+ * =================================================================
+ * I. TRANSLATION DATA
+ * =================================================================
+ * The 'translations' object holds all strings for multilingual support (French, English, Dari/Persian).
+ * Keys are used throughout the application, and the values provide the content for each language.
+ */
 const translations = {
     "fr": {
         "home_title": "Besmillah JAMALI - Développeur Web",
@@ -65,6 +72,55 @@ const translations = {
         "contact_address_value": "10600 La Chapelle Saint Luc",
         "blog_title": "Blog - Besmillah JAMALI",
         "blog_heading": "Blog",
+        "blog_welcome_heading": "Bienvenue sur mon Blog",
+        "blog_cat_home": "Accueil",
+        "blog_cat_crypto": "Marché Crypto",
+        "blog_cat_stocks": "Marché Boursier",
+        "blog_cat_tech": "Nouvelles Tech",
+        "blog_cat_webdev": "Dev Web",
+        "blog_cat_energy": "Énergie Renouvelable",
+        "crypto_page_title": "Marché Crypto - Besmillah JAMALI",
+        "crypto_page_heading": "Données en Direct et Analyses du Marché Crypto",
+        "crypto_heading_top10": "Top 10 Cryptos (24h)",
+        "crypto_heading_overview": "Aperçu du Marché",
+        "crypto_chart_note": "Un graphique ou une visualisation dynamique des capitalisations boursières ira ici.",
+        "crypto_heading_analysis": "Analyse en Vedette",
+        "crypto_more_articles": "Plus d'articles disponibles sur le blog principal.",
+        "stocks_page_title": "Marché Boursier - Besmillah JAMALI",
+        "stocks_heading_indices": "Principaux Indices Boursiers Mondiaux",
+        "forex_heading_large": "Taux de Change Majeurs (USD, EUR, JPY)",
+        "stocks_heading_analysis": "Analyse Boursière en Vedette",
+        "tech_page_title": "Actualités Tech & Analyse - Besmillah JAMALI",
+        "tech_heading_featured": "Histoire Tech en Vedette: IA, ML & Robotique",
+        "tech_heading_webdev": "Tendances Dev Web & Frontend",
+        "tech_heading_gadgets": "Actualités Gadgets & Matériel",
+        "tech_heading_updates": "Dernières Mises à Jour Tech Globales",
+        "tech_featured_title": "La Prochaine Ère de l'IA: De l'Intelligence Générale aux Agents Spécialisés",
+        "tech_featured_summary": "Un examen détaillé du changement dans la recherche en IA et comment les modèles hautement spécialisés redéfinissent les industries, avec des implications pour le développement web et la finance.",
+        "read_more": "Lire la Suite →",
+        "energy_page_title": "Ingénierie Énergie Renouvelable - Besmillah JAMALI",
+        "energy_heading_deep_dive": "Analyse Approfondie: Intégration Réseau & Stockage",
+        "energy_heading_trends": "Tendances Émergentes en Énergie Renouvelable",
+        "energy_heading_policy": "Mises à Jour Politiques & Marché",
+        "energy_heading_metrics": "Métrique Clés de l'Énergie Mondiale",
+        "energy_deep_dive_title": "Les Défis d'Ingénierie des Réseaux 100% Renouvelables",
+        "energy_deep_dive_summary": "Une analyse technique détaillée de l'inertie, du contrôle de fréquence et du rôle des solutions de stockage avancé dans la stabilisation des systèmes électriques.",
+        "webdev_page_title": "Développement Web & Codage - Besmillah JAMALI",
+        "webdev_heading_frameworks": "Frameworks, Outils & Actualités Récents",
+        "webdev_heading_cases": "Études de Cas & Projets en Vedette",
+        "webdev_heading_guides": "Guides de Codage Essentiels",
+        "webdev_case_title": "Étude de Cas: Construction d'une Plateforme E-commerce Haute Performance",
+        "webdev_case_summary": "Un aperçu de l'architecture, de la pile technologique (MERN/JAMStack) et des optimisations de performance utilisées pour gérer des charges de trafic importantes.",
+        "footer_social_call": "Suivez-moi sur les réseaux sociaux :",
+        "all_rights": "&copy 2025 Besmillah JAMALI. Tous droits réservés.",
+        "market_heading_overview": "Aperçu du Marché Mondial",
+        "crypto_heading_section": "Résumé du Marché Crypto",
+        "news_hot_heading": "Actualités Chaudes du Marché",
+        "news_hot_content": "La pression à la baisse se poursuit sur les marchés mondiaux. La crypto et les principales bourses ont connu une volatilité significative en raison des tensions géopolitiques et des récents événements de liquidité. L'attention des investisseurs reste focalisée sur les rapports macroéconomiques américains.",
+        "chart_total_market_heading": "Graphique de la Capitalisation Boursière Totale sur 24h",
+        "indices_heading_section": "Indices Boursiers Mondiaux",
+        "companies_heading_section": "Grandes Entreprises (Tech)",
+        "forex_heading_section": "Paires Forex Majeures",
     },
     "en": {
         "home_title": "Besmillah JAMALI - Web Developer",
@@ -132,6 +188,55 @@ const translations = {
         "contact_address_value": "10600 La Chapelle Saint Luc",
         "blog_title": "Blog - Besmillah JAMALI",
         "blog_heading": "Blog",
+        "blog_welcome_heading": "Welcome to My Blog",
+        "blog_cat_home": "Home",
+        "blog_cat_crypto": "Crypto Market",
+        "blog_cat_stocks": "Stock Market",
+        "blog_cat_tech": "Tech News",
+        "blog_cat_webdev": "Web Dev",
+        "blog_cat_energy": "Renewable Energy",
+        "crypto_page_title": "Crypto Market - Besmillah JAMALI",
+        "crypto_page_heading": "Crypto Market Live Data & Insights",
+        "crypto_heading_top10": "Top 10 Cryptos (24h)",
+        "crypto_heading_overview": "Market Overview",
+        "crypto_chart_note": "A chart or dynamic market cap visualization will go here.",
+        "crypto_heading_analysis": "Featured Analysis",
+        "crypto_more_articles": "More articles available in the main blog.",
+        "stocks_page_title": "Stock Market - Besmillah JAMALI",
+        "stocks_heading_indices": "Major Global Stock Indices",
+        "forex_heading_large": "Major Forex Rates (USD, EUR, JPY)",
+        "stocks_heading_analysis": "Featured Stock Analysis",
+        "tech_page_title": "Tech News & Analysis - Besmillah JAMALI",
+        "tech_heading_featured": "Featured Tech Story: AI, ML & Robotics",
+        "tech_heading_webdev": "Web Dev & Frontend Trends",
+        "tech_heading_gadgets": "Gadgets & Hardware News",
+        "tech_heading_updates": "Latest Global Tech Updates",
+        "tech_featured_title": "The Next Era of AI: From General Intelligence to Specialized Agents",
+        "tech_featured_summary": "A detailed look at the shift in AI research and how highly specialized models are reshaping industries, with implications for web development and finance.",
+        "read_more": "Read More →",
+        "energy_page_title": "Renewable Energy Engineering - Besmillah JAMALI",
+        "energy_heading_deep_dive": "Deep Dive: Grid Integration & Storage Solutions",
+        "energy_heading_trends": "Emerging Renewable Trends",
+        "energy_heading_policy": "Policy & Market Updates",
+        "energy_heading_metrics": "Key Global Energy Metrics",
+        "energy_deep_dive_title": "The Engineering Challenges of 100% Renewable Grids",
+        "energy_deep_dive_summary": "A technical breakdown of inertia, frequency control, and the role of advanced battery and pumped hydro storage in stabilizing power systems.",
+        "webdev_page_title": "Web Development & Coding - Besmillah JAMALI",
+        "webdev_heading_frameworks": "Latest Frameworks, Tools & News",
+        "webdev_heading_cases": "Featured Case Studies & Projects",
+        "webdev_heading_guides": "Essential Coding Guides",
+        "webdev_case_title": "Case Study: Building a High-Performance E-commerce Platform",
+        "webdev_case_summary": "An overview of the architecture, technology stack (MERN/JAMStack) and performance optimizations used to handle high traffic loads.",
+        "footer_social_call": "Follow me on social media:",
+        "all_rights": "&copy 2025 Besmillah JAMALI. All Rights Reserved.",
+        "market_heading_overview": "Global Market Overview",
+        "crypto_heading_section": "Crypto Market Summary",
+        "news_hot_heading": "Hot Market News",
+        "news_hot_content": "Downward pressure continues on global markets. Crypto and major stock exchanges faced significant volatility due to geopolitical tensions and recent liquidity events. Investors' focus remains on US macroeconomic reports.",
+        "chart_total_market_heading": "24h Global Market Cap Chart",
+        "indices_heading_section": "Global Stock Indices",
+        "companies_heading_section": "Major Companies (Tech)",
+        "forex_heading_section": "Major Forex Pairs",
     },
     "fa": {
         "home_title": "بسم الله جمالی - توسعه دهنده وب",
@@ -199,28 +304,70 @@ const translations = {
         "contact_address_value": "10600 La Chapelle Saint Luc",
         "blog_title": "بلاگ - بسم الله جمالی",
         "blog_heading": "بلاگ",
+        "blog_welcome_heading": "به بلاگ من خوش آمدید",
+        "blog_cat_home": "خانه",
+        "blog_cat_crypto": "مارکت کریپتو",
+        "blog_cat_stocks": "مارکت سهام",
+        "blog_cat_tech": "اخبار تکنالوژی",
+        "blog_cat_webdev": "توسعه وب",
+        "blog_cat_energy": "انرژی تجدیدپذیر",
+        "crypto_page_title": "مارکت کریپتو - بسم الله جمالی",
+        "crypto_page_heading": "تحلیل و داده‌های زنده بازار کریپتو",
+        "crypto_heading_top10": "۱۰ ارز برتر (۲۴ ساعت)",
+        "crypto_heading_overview": "نمای کلی بازار",
+        "crypto_chart_note": "یک نمودار یا ویژوالایزیشن پویای ارزش بازار در اینجا قرار خواهد گرفت.",
+        "crypto_heading_analysis": "تحلیل‌های برجسته",
+        "crypto_more_articles": "مقالات بیشتر در بلاگ اصلی موجود است.",
+        "stocks_page_title": "بازار سهام - بسم الله جمالی",
+        "stocks_heading_indices": "شاخص‌های اصلی سهام جهانی",
+        "forex_heading_large": "نرخ ارزهای اصلی (دلار، یورو، ین)",
+        "stocks_heading_analysis": "تحلیل‌های برجسته سهام",
+        "tech_page_title": "اخبار و تحلیل فناوری - بسم الله جمالی",
+        "tech_heading_featured": "داستان برجسته فناوری: هوش مصنوعی، یادگیری ماشین و رباتیک",
+        "tech_heading_webdev": "ترندهای توسعه وب و فرانت‌اند",
+        "tech_heading_gadgets": "اخبار گجت‌ها و سخت‌افزار",
+        "tech_heading_updates": "آخرین به‌روزرسانی‌های جهانی فناوری",
+        "tech_featured_title": "عصر بعدی هوش مصنوعی: از هوش عمومی تا عوامل تخصصی",
+        "tech_featured_summary": "نگاهی عمیق به تغییرات در تحقیقات هوش مصنوعی و اینکه چگونه مدل‌های بسیار تخصصی، صنایع را دگرگون می‌کنند، با پیامدهایی برای توسعه وب و امور مالی.",
+        "read_more": "بیشتر بخوانید ←",
+        "energy_page_title": "مهندسی انرژی تجدیدپذیر - بسم الله جمالی",
+        "energy_heading_deep_dive": "تحلیل عمیق: ادغام شبکه و راه‌حل‌های ذخیره‌سازی",
+        "energy_heading_trends": "روندهای نوظهور انرژی تجدیدپذیر",
+        "energy_heading_policy": "به‌روزرسانی‌های سیاست‌گذاری و بازار",
+        "energy_heading_metrics": "معیارهای کلیدی انرژی جهانی",
+        "energy_deep_dive_title": "چالش‌های مهندسی شبکه‌های ۱۰۰٪ تجدیدپذیر",
+        "energy_deep_dive_summary": "تجزیه و تحلیل فنی اینرسی، کنترل فرکانس و نقش ذخیره‌سازی پیشرفته باتری و هیدروپمپ در تثبیت سیستم‌های قدرت.",
+        "webdev_page_title": "توسعه وب و کدنویسی - بسم الله جمالی",
+        "webdev_heading_frameworks": "جدیدترین فریمورک‌ها، ابزارها و اخبار",
+        "webdev_heading_cases": "مطالعات موردی و پروژه‌های برجسته",
+        "webdev_heading_guides": "راهنماهای کدنویسی ضروری",
+        "webdev_case_title": "مطالعه موردی: ساخت یک پلتفرم تجارت الکترونیک با عملکرد بالا",
+        "webdev_case_summary": "مروری بر معماری، پشته فناوری (MERN/JAMStack) و بهینه‌سازی عملکردی که برای مدیریت بارهای ترافیکی بالا استفاده می‌شود.",
+        "footer_social_call": "در شبکه‌های اجتماعی من را دنبال کنید:",
+        "all_rights": "&copy ۲۰۲۵ بسم الله جمالی. تمامی حقوق محفوظ است.",
+        "market_heading_overview": "نمای کلی بازارهای جهانی",
+        "crypto_heading_section": "خلاصه بازار کریپتو",
+        "news_hot_heading": "اخبار داغ روز",
+        "news_hot_content": "فشار نزولی بر بازارهای جهانی ادامه دارد. کریپتو و بورس‌های اصلی تحت تأثیر تنش‌های ژئوپلیتیک و نقدینگی‌های اخیر، با نوسانات قابل توجهی همراه بوده‌اند. توجه سرمایه‌گذاران به گزارش‌های اقتصادی کلان آمریکا جلب شده است.",
+        "chart_total_market_heading": "نمودار ۲۴ ساعته ارزش کل بازار",
+        "indices_heading_section": "شاخص‌های بورس جهانی",
+        "companies_heading_section": "شرکت‌های بزرگ (فناوری)",
+        "forex_heading_section": "جفت‌ارزهای اصلی (فارکس)",
     }
 };
 
-let slideIndex = 0;
-const showSlides = () => {
-    let i;
-    const slides = document.getElementsByClassName("my-slides");
-    if (slides.length > 0) {
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-    }
-    setTimeout(showSlides, 5000); // Change image every 5 seconds
-};
+/**
+ * =================================================================
+ * II. LANGUAGE & THEME MANAGEMENT
+ * =================================================================
+ */
 
+/**
+ * Updates all text elements on the page based on the selected language,
+ * sets body direction (LTR/RTL), and saves the choice to local storage.
+ * @param {string} lang - The language code ('fr', 'en', 'fa').
+ */
 const setLanguage = (lang) => {
-    // Save the selected language to local storage
     localStorage.setItem('selectedLanguage', lang);
     document.documentElement.lang = lang;
     document.body.dir = (lang === 'fa') ? 'rtl' : 'ltr';
@@ -234,17 +381,21 @@ const setLanguage = (lang) => {
 
     const titleElement = document.querySelector('title');
     const titleKey = titleElement.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][titleKey]) {
+    if (titleElement && translations[lang] && translations[lang][titleKey]) {
         titleElement.textContent = translations[lang][titleKey];
     }
 
-    // Update the main language button text
     const mainLangBtn = document.querySelector('.main-lang-btn');
     if (mainLangBtn) {
         mainLangBtn.textContent = lang.toUpperCase();
     }
 };
 
+/**
+ * Sets the website's visual theme (e.g., 'dark', 'light'),
+ * applies the corresponding CSS class to the body, and updates button states.
+ * @param {string} theme - The theme name (e.g., 'dark', 'light', 'custom').
+ */
 const setTheme = (theme) => {
     localStorage.setItem('selectedTheme', theme);
     document.body.className = '';
@@ -252,7 +403,6 @@ const setTheme = (theme) => {
         document.body.classList.add(`${theme}-theme`);
     }
 
-    // Update active state of theme buttons
     document.querySelectorAll('.theme-btn').forEach(btn => {
         btn.classList.remove('active');
     });
@@ -261,7 +411,6 @@ const setTheme = (theme) => {
         activeThemeBtn.classList.add('active');
     }
 
-    // Update the main theme button text
     const mainThemeBtn = document.querySelector('.main-theme-btn');
     if (mainThemeBtn) {
         mainThemeBtn.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
@@ -269,31 +418,618 @@ const setTheme = (theme) => {
 }
 
 
+/**
+ * =================================================================
+ * III. HERO SLIDESHOW
+ * =================================================================
+ */
+let slideIndex = 0;
+
+/**
+ * Controls the automatic slideshow for the hero section, changing the image every 5 seconds.
+ */
+const showSlides = () => {
+    const slides = document.getElementsByClassName("my-slides");
+    if (slides.length > 0) {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+};
+
+/**
+ * =================================================================
+ * IV. BLOG MODULE: CATEGORY FILTERING & API FETCH
+ * =================================================================
+ */
+
+// Placeholder API endpoints (some use 'demo' keys and will require replacement)
+const apis = {
+    crypto: "https://api.coingecko.com/api/v3/status_updates",
+    energy: "https://newsdata.io/api/1/news?apikey=pub_28644e7b1b38b18c612fc245ad44195b69c1&q=renewable%20energy&language=fr",
+    webdev: "https://newsapi.org/v2/everything?q=web%20development&language=fr&apiKey=demo", // Replace 'demo' with your key
+    "tech-news": "https://gnews.io/api/v4/search?q=intelligence%20artificielle&lang=fr&token=demo", // Replace 'demo'
+    stocks: "https://financialmodelingprep.com/api/v3/stock_news?limit=3&apikey=demo"
+};
+
+/**
+ * Fetches news data for a specific category and updates the corresponding blog cards.
+ * Also starts a basic slider for the fetched cards.
+ * NOTE: This function may need updates if API keys/endpoints change.
+ * @param {string} category - The blog category (e.g., 'crypto', 'energy').
+ * @param {string} url - The API URL to fetch from.
+ * @param {HTMLElement[]} cardList - List of card elements to update.
+ */
+async function fetchNews(category, url, cardList) {
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        let articles = [];
+
+        // Data processing based on API structure
+        if (category === "crypto" && Array.isArray(data.status_updates)) {
+            articles = data.status_updates.slice(0, 3).map(item => ({
+                title: item.project.name || "Crypto Update",
+                desc: item.description || "",
+                url: item.project.announcement_url || "#",
+                img: item.project.image.small || "://via.placeholder.com/https600x400?text=Crypto"
+            }));
+        } else if (data.results) { // Used by NewsData.io
+            articles = data.results.slice(0, 3).map(item => ({
+                title: item.title,
+                desc: item.description || "",
+                url: item.link || item.url || "#",
+                img: item.image_url || "https://via.placeholder.com/600x400?text=News"
+            }));
+        } else if (Array.isArray(data.articles)) { // Used by NewsAPI (or similar)
+            articles = data.articles.slice(0, 3).map(item => ({
+                title: item.title,
+                desc: item.description || "",
+                url: item.url || "#",
+                img: item.urlToImage || "https://via.placeholder.com/600x400?text=News"
+            }));
+        } else if (Array.isArray(data)) { // Used by FinancialModelingPrep (or similar)
+            articles = data.slice(0, 3).map(item => ({
+                title: item.title,
+                desc: item.text || "",
+                url: item.url || "#",
+                img: "https://via.placeholder.com/600x400?text=Stock"
+            }));
+        }
+
+        // Replace card content with fetched news
+        cardList.forEach((card, i) => {
+            const a = articles[i % articles.length];
+            if (!a) return;
+            card.querySelector("h3").textContent = a.title;
+            card.querySelector("p:nth-of-type(2)").textContent = a.desc.slice(0, 100) + "...";
+            const img = card.querySelector("img");
+            img.src = a.img;
+            img.alt = a.title;
+            card.querySelector(".read-more").href = a.url;
+            card.querySelector(".read-more").target = "_blank";
+        });
+
+        startSlider(cardList); // Start the automatic slider
+
+    } catch (err) {
+        console.error(`Error loading news for ${category}:`, err);
+    }
+}
+
+/**
+ * Starts a simple auto-sliding functionality for a list of blog cards.
+ * @param {HTMLElement[]} cardList - List of card elements to animate.
+ */
+function startSlider(cardList) {
+    if (cardList.length <= 1) return;
+    let index = 0;
+    setInterval(() => {
+        cardList.forEach((card, i) => {
+            // Animates the cards horizontally to show the next one
+            card.style.transform = `translateX(${(i - index) * 340}px)`;
+        });
+        index = (index + 1) % cardList.length;
+    }, 4000);
+}
+
+
+/**
+ * =================================================================
+ * V. PAGE-SPECIFIC DATA FETCHERS (Dashboards)
+ * =================================================================
+ * These functions simulate fetching or use placeholders for specific dashboard pages.
+ */
+
+// Global variable for Chart.js instance management
+let chartInstance = null;
+const coinDetailModal = document.getElementById('coin-detail-modal');
+
+
+/**
+ * Fetches and displays data for the Crypto Market page using the CoinGecko API.
+ * Populates Top 10 assets and Trending Coins sections.
+ */
+const fetchCryptoPageData = async () => {
+    const topAssetsContainer = document.getElementById('top-crypto-prices');
+    const trendingContainer = document.getElementById('trending-coins');
+
+    if (!topAssetsContainer || !trendingContainer) return;
+
+    const top10Url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h';
+    const trendingUrl = 'https://api.coingecko.com/api/v3/search/trending';
+
+    try {
+        const [top10Response, trendingResponse] = await Promise.all([
+            fetch(top10Url),
+            fetch(trendingUrl)
+        ]);
+
+        // --- Process Top 10 Cryptos ---
+        if (top10Response.ok) {
+            const data = await top10Response.json();
+            let assetsHtml = '';
+
+            data.forEach(coin => {
+                if (coin.current_price && coin.price_change_percentage_24h !== null) {
+                    const price = coin.current_price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                    const change24h = coin.price_change_percentage_24h.toFixed(2);
+                    const isPositive = parseFloat(change24h) >= 0;
+
+                    assetsHtml += `
+                        <button class="crypto-item-btn" data-coin-id="${coin.id}" onclick="openCoinModal('${coin.id}')">
+                            <div class="item-info">
+                                <img src="${coin.image}" alt="${coin.name} Icon" class="coin-icon">
+                                <span>${coin.name} (${coin.symbol.toUpperCase()})</span>
+                            </div>
+                            <div class="item-data">
+                                <span class="price-value">$${price}</span>
+                                <span class="price-change ${isPositive ? 'positive' : 'negative'}">
+                                    ${isPositive ? '▲' : '▼'} ${change24h}%
+                                </span>
+                            </div>
+                        </button>
+                    `;
+                }
+            });
+            topAssetsContainer.innerHTML = assetsHtml;
+        } else {
+            topAssetsContainer.innerHTML = `<p class="negative">Error loading Top 10 data: ${top10Response.status}</p>`;
+        }
+
+        // --- Process Trending Coins ---
+        if (trendingResponse.ok) {
+            const data = await trendingResponse.json();
+            let trendingHtml = '';
+
+            data.coins.slice(0, 5).forEach(item => {
+                const coin = item.item;
+                trendingHtml += `
+                    <div class="data-item trending-item">
+                        <div class="item-info">
+                            <span class="rank"> ${coin.score + 1}</span>
+                            <img src="${coin.thumb}" alt="${coin.name} Icon" class="coin-icon small">
+                            <a href="https://www.coingecko.com/en/coins/${coin.id}" target="_blank">
+                                ${coin.name} (${coin.symbol.toUpperCase()})
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+            trendingContainer.innerHTML = trendingHtml;
+        } else {
+            trendingContainer.innerHTML = `<p class="negative">Error loading Trending data: ${trendingResponse.status}</p>`;
+        }
+    } catch (error) {
+        console.error("A network or fetch error occurred:", error);
+        topAssetsContainer.innerHTML = `<p class="negative">Connection Error: Could not reach CoinGecko API. (Check Console)</p>`;
+        trendingContainer.innerHTML = `<p class="negative">Connection Error: Could not reach CoinGecko API. (Check Console)</p>`;
+    }
+    // Highlight the active category (assuming a function exists)
+    // highlightActiveCategory();
+};
+
+/**
+ * Fetches and displays data for the Stock Market page using placeholders.
+ * Populates Major Indices and Major Forex Rates sections.
+ */
+const fetchStockPageData = async () => {
+    // 1. Fetch Major Indices (Using placeholder data)
+    const indices = {
+        'S&P 500': 'SPX', 'NASDAQ': 'IXIC', 'Dow Jones': 'DJI',
+        'FTSE 100 (London)': 'FTSE', 'CAC 40 (Paris)': 'CAC', 'DAX (Frankfurt)': 'DAX',
+    };
+    const indicesContainer = document.getElementById('major-stock-indices');
+    let indicesHtml = '';
+
+    try {
+        for (const [name] of Object.entries(indices)) {
+            const price = (Math.random() * 200 + 1000).toFixed(2);
+            const changePercent = (Math.random() * 3 - 1.5).toFixed(2);
+            const isPositive = parseFloat(changePercent) >= 0;
+
+            indicesHtml += `
+                <div class="data-item">
+                    <span>${name}</span>
+                    <span>${price}</span>
+                    <span class="price-change ${isPositive ? 'positive' : 'negative'}">
+                        ${isPositive ? '▲' : '▼'} ${changePercent}%
+                    </span>
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error("Error fetching stock indices data:", error);
+        indicesHtml = `<p class="negative">Failed to load index data.</p>`;
+    }
+    if (indicesContainer) indicesContainer.innerHTML = indicesHtml;
+
+
+    // 2. Fetch Forex Rates (Large Block - Using placeholder data)
+    const pairs = ['EURUSD', 'USDJPY', 'GBPUSD', 'AUDUSD', 'USDCAD', 'USDCHF'];
+    const forexContainer = document.getElementById('forex-rates-large');
+    let forexHtml = '';
+
+    try {
+        for (const pair of pairs) {
+            const rate = (Math.random() * 0.5 + 1.0).toFixed(4);
+            const changePercent = (Math.random() * 0.8 - 0.4).toFixed(2);
+            const isPositive = parseFloat(changePercent) >= 0;
+
+            forexHtml += `
+                <div class="data-item">
+                    <span>${pair.replace('USD', '/USD ')}</span>
+                    <span>${rate}</span>
+                    <span class="price-change ${isPositive ? 'positive' : 'negative'}">
+                        ${isPositive ? '▲' : '▼'} ${changePercent}%
+                    </span>
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error("Error fetching forex data:", error);
+        forexHtml = `<p class="negative">Failed to load forex data.</p>`;
+    }
+    if (forexContainer) forexContainer.innerHTML = forexHtml;
+};
+
+/**
+ * Populates the Renewable Energy dashboard with simulated key metrics.
+ */
+const fetchEnergyPageData = async () => {
+    const metricsContainer = document.getElementById('energy-metrics');
+    if (!metricsContainer) return;
+
+    const metricsData = {
+        'Global Renewable Capacity (GW)': '3300',
+        'Solar Growth Rate (YoY)': '+28.5%',
+        'Wind Offshore Capacity (GW)': '65',
+        'Cost of Solar (LCOE - $/MWh)': '35.00',
+        'Global EV Sales Share': '18.0%',
+        'Energy Storage Deployed (GWh)': '200',
+    };
+    let metricsHtml = '';
+
+    try {
+        for (const [name, value] of Object.entries(metricsData)) {
+            // Simple logic for visual indicator
+            const isPositive = name.includes('Growth') || name.includes('Capacity') || name.includes('Sales');
+
+            metricsHtml += `
+                <div class="data-item">
+                    <span>${name}</span>
+                    <span>${value}</span>
+                    <span class="price-change ${isPositive ? 'positive' : 'neutral'}">
+                        ${isPositive ? '↑' : ''}
+                    </span>
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error("Error fetching energy metrics data:", error);
+        metricsHtml = `<p class="negative">Failed to load energy metrics data.</p>`;
+    }
+    metricsContainer.innerHTML = metricsHtml;
+
+    // highlightActiveCategory(); // assuming a function exists
+};
+
+/**
+ * Placeholder function for the Tech News page. Content is primarily static.
+ */
+const fetchTechPageData = () => {
+    // highlightActiveCategory(); // assuming a function exists
+};
+
+/**
+ * Placeholder function for the Web Development page. Content is primarily static.
+ */
+const fetchWebDevPageData = () => {
+    // highlightActiveCategory(); // assuming a function exists
+};
+
+
+/**
+ * =================================================================
+ * VI. CRYPTO MODAL (Details and Chart)
+ * =================================================================
+ * Functions for opening, closing, and populating the crypto detail modal.
+ */
+
+/**
+ * Opens the coin detail modal, sets up the default timeframe, and initiates data loading.
+ * @param {string} coinId - The CoinGecko ID of the cryptocurrency.
+ */
+const openCoinModal = async (coinId) => {
+    if (!coinDetailModal) return;
+
+    coinDetailModal.style.display = 'block';
+    document.body.classList.add('modal-open');
+
+    // Set 24h as default active timeframe
+    document.querySelectorAll('.timeframe-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector('.timeframe-btn[data-days="1"]')?.classList.add('active');
+
+    await loadCoinDetails(coinId, 1); // 1 day default
+
+    // Attach click listeners for timeframe buttons
+    document.querySelectorAll('.timeframe-btn').forEach(button => {
+        button.onclick = async (event) => {
+            document.querySelectorAll('.timeframe-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            const days = event.target.getAttribute('data-days');
+            await loadCoinDetails(coinId, days);
+        };
+    });
+};
+
+/**
+ * Closes the coin detail modal and cleans up the Chart.js instance.
+ */
+const closeCoinModal = () => {
+    if (coinDetailModal) coinDetailModal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+    // Destroy old chart instance to prevent memory leaks
+    if (chartInstance) {
+        chartInstance.destroy();
+        chartInstance = null;
+    }
+};
+
+/**
+ * Fetches detailed coin data and price chart history from the CoinGecko API.
+ * Updates the modal content and renders the chart using Chart.js.
+ * @param {string} coinId - The CoinGecko ID of the cryptocurrency.
+ * @param {number} days - The historical time range in days (1, 7, 30, etc.).
+ */
+const loadCoinDetails = async (coinId, days) => {
+    const header = document.getElementById('modal-header');
+    const chartLoadingMsg = document.getElementById('chart-loading-msg');
+    const chartCanvas = document.getElementById('coin-chart');
+
+    if (!header || !chartLoadingMsg || !chartCanvas) return;
+
+    header.innerHTML = '<h2>Loading...</h2>';
+    chartLoadingMsg.textContent = 'Loading chart data...';
+    chartLoadingMsg.style.display = 'block';
+    chartCanvas.style.display = 'none';
+
+    const MAX_RETRIES = 3;
+    let lastError = null;
+
+    for (let i = 0; i < MAX_RETRIES; i++) {
+        try {
+            let interval = (days == 1) ? 'hourly' : 'daily';
+
+            const priceChartUrl = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}&interval=${interval}`;
+            const coinDataUrl = `https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`;
+
+            const [chartResponse, dataResponse] = await Promise.all([
+                fetch(priceChartUrl),
+                fetch(coinDataUrl)
+            ]);
+
+            if (!chartResponse.ok || !dataResponse.ok) {
+                // Simplified error handling for rate limit or not found
+                const status = chartResponse.status === 429 || dataResponse.status === 429 ? 429 : 404;
+                if (status === 429) throw new Error('API Rate Limit Exceeded (429). Retrying...');
+                else if (status === 404) throw new Error('Coin Not Found (404). Check ID.');
+                else throw new Error(`API request failed. Status: ${chartResponse.status}/${dataResponse.status}`);
+            }
+
+            const chartData = await chartResponse.json();
+            const coinDetails = await dataResponse.json();
+
+            if (!chartData || !chartData.prices || chartData.prices.length === 0) {
+                throw new Error("Received empty or invalid chart data structure.");
+            }
+
+            // --- 1. Modal header and main info ---
+            const currentPrice = coinDetails.market_data.current_price.usd.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            const marketCap = coinDetails.market_data.market_cap.usd.toLocaleString();
+            const volume = coinDetails.market_data.total_volume.usd.toLocaleString();
+
+            let changeKey = '';
+            if (days == 1) changeKey = 'price_change_percentage_24h';
+            else if (days == 7) changeKey = 'price_change_percentage_7d';
+            else if (days == 30) changeKey = 'price_change_percentage_30d';
+            else if (days == 180) changeKey = 'price_change_percentage_200d';
+
+            const changePercent = coinDetails.market_data[`${changeKey}_in_currency`]?.usd?.toFixed(2);
+            const isNumericChange = !isNaN(parseFloat(changePercent));
+            const isPositive = isNumericChange && parseFloat(changePercent) >= 0;
+
+            const changeDisplay = (days == 180) ? '6m' : `${days}d`;
+
+            const changeHtml = (isNumericChange) ? `
+                <span class="change-info ${isPositive ? 'positive' : 'negative'}">
+                    ${isPositive ? '▲' : '▼'} ${Math.abs(changePercent)}% (${changeDisplay})
+                </span>` : '<span class="change-info neutral">N/A</span>';
+
+            // Update Header
+            header.innerHTML = `
+                <img src="${coinDetails.image.small}" alt="${coinDetails.name} Icon" class="coin-icon-modal">
+                <h1>${coinDetails.name} (${coinDetails.symbol.toUpperCase()})</h1>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-left: auto;">
+                    <p class="current-price-modal">$${currentPrice}</p>
+                    ${changeHtml}
+                </div>
+            `;
+
+            // Update additional stats
+            document.getElementById('market-cap-value').textContent = `$${marketCap}`;
+            document.getElementById('volume-value').textContent = `$${volume}`;
+
+            // --- 2. Draw Chart ---
+            chartLoadingMsg.style.display = 'none';
+
+            const prices = chartData.prices.map(p => p[1]);
+            const labels = chartData.prices.map(p => {
+                const date = new Date(p[0]);
+                return (days == 1) ? date.toLocaleTimeString() : date.toLocaleDateString();
+            });
+
+            if (chartInstance) chartInstance.destroy(); // Destroy previous chart
+
+            if (window.Chart && prices.length > 0) {
+                chartCanvas.style.display = 'block';
+
+                const chartColor = isPositive ? 'rgba(76, 175, 80, 1)' : 'rgba(244, 67, 54, 1)';
+                const backgroundColor = isPositive ? 'rgba(76, 175, 80, 0.2)' : 'rgba(244, 67, 54, 0.2)';
+
+                chartInstance = new Chart(chartCanvas, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: `${coinDetails.name} Price (USD)`,
+                            data: prices,
+                            borderColor: chartColor,
+                            borderWidth: 2,
+                            pointRadius: 0,
+                            fill: true,
+                            backgroundColor: backgroundColor,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { display: true, ticks: { maxTicksLimit: 7 }, grid: { color: 'rgba(255, 255, 255, 0.1)' } },
+                            y: { beginAtZero: false, grid: { color: 'rgba(255, 255, 255, 0.1)' } }
+                        },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+            } else {
+                chartCanvas.style.display = 'none';
+                chartLoadingMsg.textContent = window.Chart ? "No chart data available for this range." : "Error: Chart.js library is not loaded.";
+                chartLoadingMsg.style.display = 'block';
+            }
+
+            return; // Exit retry loop on success
+
+        } catch (error) {
+            lastError = error;
+            console.warn(`Attempt ${i + 1} failed. Retrying...`, error.message);
+            if (i < MAX_RETRIES - 1) {
+                await new Promise(resolve => setTimeout(resolve, 1000 * (2 ** i)));
+            }
+        }
+    }
+
+    // If all retries failed
+    console.error("All API fetch attempts failed:", lastError);
+    if (header) header.innerHTML = `<h2>Error Loading Data</h2>`;
+    if (chartLoadingMsg) chartLoadingMsg.textContent = `Failed to load chart or details. Reason: ${lastError ? lastError.message : 'Unknown Error'}`;
+    if (chartCanvas) chartCanvas.style.display = 'none';
+};
+
+
+/**
+ * =================================================================
+ * VII. EVENT LISTENERS (DOM Content Loaded)
+ * =================================================================
+ * The main entry point for script execution once the DOM is ready.
+ */
 document.addEventListener('DOMContentLoaded', () => {
-    // Get the language from local storage on page load
+    // 1. Initialize Language and Theme from Local Storage
     const storedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
     setLanguage(storedLanguage);
 
-    // Get the theme from local storage on page load
     const storedTheme = localStorage.getItem('selectedTheme') || 'dark';
     setTheme(storedTheme);
 
-    // Only start the slideshow if the hero section exists
+    // 2. Start Slideshow for Hero Section
     if (document.querySelector('.hero')) {
         showSlides();
     }
 
+    // 3. Attach Event Listeners for Language & Theme Switches
     document.querySelectorAll('.lang-switcher').forEach(button => {
         button.addEventListener('click', (e) => {
             const lang = e.target.getAttribute('data-lang');
-            setLanguage(lang);
+            if (lang) setLanguage(lang);
         });
     });
 
     document.querySelectorAll('.theme-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const theme = e.target.getAttribute('data-theme');
-            setTheme(theme);
+            if (theme) setTheme(theme);
         });
     });
+
+    // 4. Run Page-Specific Data Fetchers
+    // (Assuming 'highlightActiveCategory' is a globally defined function that exists)
+    // highlightActiveCategory();
+
+    if (document.getElementById('crypto-dashboard')) {
+        fetchCryptoPageData();
+    }
+    if (document.getElementById('stocks-dashboard')) {
+        fetchStockPageData();
+    }
+    if (document.getElementById('tech-dashboard')) {
+        fetchTechPageData();
+    }
+    if (document.getElementById('energy-dashboard')) {
+        fetchEnergyPageData();
+    }
+    if (document.getElementById('webdev-dashboard')) {
+        fetchWebDevPageData();
+    }
+
+    // 5. Initialize Blog Filtering and News Fetching (if on blog page)
+    if (document.querySelector('.blog-grid')) {
+        filterBlogPosts();
+
+        // Group cards by category and fetch news for each
+        const cards = document.querySelectorAll(".blog-card");
+        const categories = {};
+        cards.forEach(card => {
+            const cat = card.dataset.category;
+            if (cat && !categories[cat]) categories[cat] = [];
+            if (cat) categories[cat].push(card);
+        });
+
+        Object.entries(categories).forEach(([category, cardList]) => {
+            if (apis[category]) {
+                fetchNews(category, apis[category], cardList);
+            }
+        });
+    }
+
+    // 6. Modal Close Handler (Click outside the modal)
+    window.onclick = function (event) {
+        if (event.target === coinDetailModal) {
+            closeCoinModal();
+        }
+    };
 });
