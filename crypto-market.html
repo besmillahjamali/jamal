@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="crypto_page_title">Crypto Market - Besmillah JAMALI</title>
+    <link rel="stylesheet" href="fontawesome.min.css">
+    <title data-i18n="crypto_page_title">Crypto Market - Besmillah JAMALI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CD2yXmUqMvR08+6Pz+zJt9Z2D7Q9FwP/XqYF9eYx0L4Pq5R0U4M9/Hj00jJ/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dark-theme">
+
+    <header>
+        <div class="logo">
+            <h1> <a href="index.html"> Besmillah JAMALI </a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="about-me.html" data-i18n="nav_about">À Propos</a></li>
+                <li><a href="skill.html" data-i18n="nav_skills">Compétences</a></li>
+                <li><a href="experience.html" data-i18n="nav_experience">Expériences</a></li>
+                <li><a href="project.html" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div class="dropdown-container">
+                <button class="main-lang-btn" data-lang="fr">FR</button>
+                <div class="dropdown-content">
+                    <button class="lang-switcher" data-lang="fr">Français</button>
+                    <button class="lang-switcher" data-lang="en">English</button>
+                    <button class="lang-switcher" data-lang="fa">فارسی</button>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <button class="main-theme-btn" data-theme="dark">Dark</button>
+                <div class="dropdown-content">
+                    <button class="theme-btn" data-theme="dark">Dark</button>
+                    <button class="theme-btn" data-theme="light">Light</button>
+                    <button class="theme-btn" data-theme="glass">Glass</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section id="crypto-dashboard">
+            <h2 class="welcome-heading" data-i18n="blog_welcome_heading">Welcome to My Blog</h2>
+
+            <nav class="blog-category-nav">
+                <ul id="blog-categories">
+                    <li><a href="blog.html" data-category="home" data-i18n="blog_cat_home">Home</a></li>
+                    <li><a href="crypto-market.html" data-category="crypto" data-i18n="blog_cat_crypto">Crypto
+                            Market</a></li>
+                    <li><a href="stock-market.html" data-category="stocks" data-i18n="blog_cat_stocks">Stock Market</a>
+                    </li>
+                    <li><a href="tech-news.html" data-category="tech" data-i18n="blog_cat_tech">Tech News</a></li>
+                    <li><a href="renewable-energy.html" data-category="energy" data-i18n="blog_cat_energy">Renewable
+                            Energy</a></li>
+                    <li><a href="web-dev.html" data-category="webdev" data-i18n="blog_cat_webdev">Web Dev</a></li>
+                </ul>
+            </nav>
+
+
+            
+
+            <div class="crypto-main-grid">
+
+                <div class="market-block trending-block">
+                    <h3 data-i18n="crypto_heading_trending">Trending Coins (Last 24h)</h3>
+                    <div id="trending-coins" class="news-list">
+                        <p data-i18n="loading_data">Loading data...</p>
+                    </div>
+                </div>
+
+                <div class="market-block top-prices-block">
+                    <h3 data-i18n="crypto_heading_top10">Top 10 Currencies (change Last 24)</h3>
+                    <div id="top-crypto-prices" class="data-list">
+                        <p data-i18n="loading_data">Loading data...</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="market-block market-overview-block">
+                    <h3 data-i18n="crypto_heading_overview">Market Overview (Placeholder)</h3>
+                    <div id="market-overview">
+                        <p data-i18n="crypto_chart_note">A chart or dynamic market cap visualization will go here.</p>
+                        <div
+                            style="height: 300px; background-color: var(--background-color); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center;">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="market-block analysis-block">
+                    <h3 data-i18n="crypto_heading_analysis">Featured Analysis</h3>
+                    <div id="crypto-analysis" class="news-list">
+                        <div class="news-item">
+                            <a href="#" target="_blank">Why DeFi is Shifting to Layer-2 Solutions</a>
+                            <span class="news-source">Opinion | Sep 2025</span>
+                        </div>
+                        <div class="news-item">
+                            <a href="#" target="_blank">Ethereum Merge: Long-term Impact on Investors</a>
+                            <span class="news-source">Case Study | Aug 2025</span>
+                        </div>
+                        <p data-i18n="crypto_more_articles">More articles available in the main blog.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+   
+
+    <div id="coin-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCoinModal()">&times;</span>
+            <div id="modal-header">
+            </div>
+
+            <div class="modal-body">
+                <div class="timeframe-selector">
+                    <button class="timeframe-btn active" data-days="1">24h</button>
+                    <button class="timeframe-btn" data-days="7">7d</button>
+                    <button class="timeframe-btn" data-days="30">30d</button>
+                    <button class="timeframe-btn" data-days="180">6m</button>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="coin-chart"></canvas>
+                    <p id="chart-loading-msg">Loading chart data...</p>
+                </div>
+
+                <div id="coin-stats">
+                    <h4>Key Metrics</h4>
+                    <p>Market Cap: <span id="market-cap-value">...</span></p>
+                    <p>Volume (24h): <span id="volume-value">...</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <footer>
+        <div class="footer-content">
+            <p data-i18n="footer_social_call">
+            </p>
+            <div class="social-links">
+                <a href="YOUR_TELEGRAM_LINK" target="_blank" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="YOUR_LINKEDIN_LINK" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="YOUR_X_LINK" target="_blank" aria-label="X (Twitter)">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="YOUR_INSTAGRAM_LINK" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="www.facebook.com/besmillahjamali" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="YOUR_TIKTOK_LINK" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+        <p class="copyright" data-i18n="all_rights"> &copy;</p>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
