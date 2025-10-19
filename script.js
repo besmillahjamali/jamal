@@ -1033,3 +1033,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 });
+
+
+
+
+
+
+
+
+// this is for active or hover  menue in blog page
+/**
+ * Adds the 'active' CSS class to the appropriate menu link based on the current URL.
+ */
+function highlightActiveMenu() {
+    // 1. Get the current page's full URL.
+    const currentUrl = window.location.href; 
+    
+    // 2. Select all links within the navigation list.
+    const menuLinks = document.querySelectorAll('#blog-categories a'); 
+
+    // 3. Loop through each link.
+    menuLinks.forEach(link => {
+        const linkUrl = link.href;
+
+        // 4. Compare: Check if the current page URL includes the menu link's URL.
+        // This is done to reliably match links even with different protocols or subdomains.
+        if (currentUrl.includes(linkUrl)) {
+            // 5. If it matches, set this link as 'active'.
+            link.classList.add('active');
+        } else {
+            // Otherwise, ensure the active state is removed.
+            link.classList.remove('active');
+        }
+    });
+}
+
+// Execute the function immediately after the entire page content is loaded.
+document.addEventListener('DOMContentLoaded', highlightActiveMenu);
