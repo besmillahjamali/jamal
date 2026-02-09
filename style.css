@@ -1343,6 +1343,46 @@ nav ul li a {
     }
 }
 
+/* SECTION OF CRYPTO NEWS PAGE */ */
+
+.news-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.news-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    transition: background 0.3s;
+}
+
+.news-item:hover {
+    background: #f9f9f9;
+}
 
 
+/* the home page of blog section */
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* This prevents stretching */
+    display: block;
+    background-color: #2a2a2a; /* Dark background if image fails */
+    border-bottom: 1px solid #333;
+}
+
+/* Optional: Add a simple fade-in when data loads */
+.blog-card h3, .blog-card p, .blog-card img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #1a1a1a; /* Dark background placeholder */
+    display: block;
+}
 
