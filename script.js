@@ -458,70 +458,6 @@ const apis = {
     stocks: "https://financialmodelingprep.com/api/v3/stock_news?limit=3&apikey=demo"
 };
 
-/**
- * Fetches news data for a specific category and updates the corresponding blog cards.
- * Also starts a basic slider for the fetched cards.
- * NOTE: This function may need updates if API keys/endpoints change.
- * @param {string} category - The blog category (e.g., 'crypto', 'energy').
- * @param {string} url - The API URL to fetch from.
- * @param {HTMLElement[]} cardList - List of card elements to update.
- */
-async function fetchNews(category, url, cardList) {
-    try {
-        const res = await fetch(url);
-        const data = await res.json();
-        let articles = [];
-
-        // Data processing based on API structure
-        if (category === "crypto" && Array.isArray(data.status_updates)) {
-            articles = data.status_updates.slice(0, 3).map(item => ({
-                title: item.project.name || "Crypto Update",
-                desc: item.description || "",
-                url: item.project.announcement_url || "#",
-                img: item.project.image.small || "://via.placeholder.com/https600x400?text=Crypto"
-            }));
-        } else if (data.results) { // Used by NewsData.io
-            articles = data.results.slice(0, 3).map(item => ({
-                title: item.title,
-                desc: item.description || "",
-                url: item.link || item.url || "#",
-                img: item.image_url || "https://via.placeholder.com/600x400?text=News"
-            }));
-        } else if (Array.isArray(data.articles)) { // Used by NewsAPI (or similar)
-            articles = data.articles.slice(0, 3).map(item => ({
-                title: item.title,
-                desc: item.description || "",
-                url: item.url || "#",
-                img: item.urlToImage || "https://via.placeholder.com/600x400?text=News"
-            }));
-        } else if (Array.isArray(data)) { // Used by FinancialModelingPrep (or similar)
-            articles = data.slice(0, 3).map(item => ({
-                title: item.title,
-                desc: item.text || "",
-                url: item.url || "#",
-                img: "https://via.placeholder.com/600x400?text=Stock"
-            }));
-        }
-
-        // Replace card content with fetched news
-        cardList.forEach((card, i) => {
-            const a = articles[i % articles.length];
-            if (!a) return;
-            card.querySelector("h3").textContent = a.title;
-            card.querySelector("p:nth-of-type(2)").textContent = a.desc.slice(0, 100) + "...";
-            const img = card.querySelector("img");
-            img.src = a.img;
-            img.alt = a.title;
-            card.querySelector(".read-more").href = a.url;
-            card.querySelector(".read-more").target = "_blank";
-        });
-
-        startSlider(cardList); // Start the automatic slider
-
-    } catch (err) {
-        console.error(`Error loading news for ${category}:`, err);
-    }
-}
 
 /**
  * Starts a simple auto-sliding functionality for a list of blog cards.
@@ -538,19 +474,6 @@ function startSlider(cardList) {
         index = (index + 1) % cardList.length;
     }, 4000);
 }
-
-
-/**
- * =================================================================
- * V. PAGE-SPECIFIC DATA FETCHERS (Dashboards)
- * =================================================================
- * These functions simulate fetching or use placeholders for specific dashboard pages.
- */
-
-// Global variable for Chart.js instance management
-let chartInstance = null;
-const coinDetailModal = document.getElementById('coin-detail-modal');
-
 
 /**
  * Fetches and displays data for the Crypto Market page using the CoinGecko API.
@@ -1036,11 +959,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
 // this is for active or hover  menue in blog page
 /**
  * Adds the 'active' CSS class to the appropriate menu link based on the current URL.
@@ -1070,3 +988,141 @@ function highlightActiveMenu() {
 
 // Execute the function immediately after the entire page content is loaded.
 document.addEventListener('DOMContentLoaded', highlightActiveMenu);
+
+
+
+// fetch function for  crypto news in blog page
+
+async function fetchCryptoNews() {
+    const newsContainer = document.getElementById('crypto-news');
+    
+    try {
+        // ۱. دریافت داده‌ها از API
+        const response = await fetch('https://min-api.cryptocompare.com/data/v2/news/?lang=EN');
+        const data = await response.json();
+        
+        // ۲. پاک کردن متن "Loading data..."
+        newsContainer.innerHTML = '';
+
+        // ۳. انتخاب ۵ خبر آخر و نمایش آن‌ها
+        const articles = data.Data.slice(0, 5); 
+
+        articles.forEach(article => {
+            const newsItem = `
+                <div class="news-item" style="margin-bottom: 15px;">
+                    <a href="${article.url}" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="${article.imageurl}" alt="news" style="width: 50px; height: 50px; border-radius: 5px; float: left; margin-right: 10px;">
+                        <h4 style="margin: 0; font-size: 14px;">${article.title}</h4>
+                        <small style="color: #888;">${new Date(article.published_on * 1000).toLocaleDateString()}</small>
+                    </a>
+                    <div style="clear: both;"></div>
+                </div>
+            `;
+            newsContainer.innerHTML += newsItem;
+        });
+
+    } catch (error) {
+        console.error('Error fetching news:', error);
+        newsContainer.innerHTML = '<p>Error loading news. Please try again later.</p>';
+    }
+}
+
+// اجرای تابع هنگام لود شدن صفحه
+document.addEventListener('DOMContentLoaded', fetchCryptoNews);
+
+
+
+
+// section of home page in blog page
+
+
+const NEWS_API_KEY = 'a4e806c62e9740abaede4f54f9bedb6f';
+
+async function updateAllSections() {
+    // 1. CRYPTO BLOCK (Using CryptoCompare - Free & No Key needed for this)
+fetchNewsAPI('bitcoin market analysis', 'crypto');
+
+    // 2. WEB DEV CARD (Using Dev.to API - Best for coding content)
+    fetchDevToArticle();
+
+    // 3. REMAINING CARDS (Using your NewsAPI Key)
+    // Energy Section
+    fetchNewsAPI('renewable energy engineering', 'energy');
+    // Tech News Section
+    fetchNewsAPI('artificial intelligence coding', 'tech-news');
+    // Stocks Section
+    fetchNewsAPI('stock market investing', 'stocks');
+    
+}
+
+// --- Specialized Fetchers ---
+
+async function fetchCryptoNews() {
+    try {
+        const response = await fetch('https://min-api.cryptocompare.com/data/v2/news/?lang=EN');
+        const data = await response.json();
+        const container = document.getElementById('crypto-news');
+        container.innerHTML = data.Data.slice(0, 5).map(news => `
+            <div class="news-item" style="margin-bottom:12px; display:flex; align-items:center; gap:10px;">
+                <img src="${news.imageurl}" style="width:40px; height:40px; border-radius:4px;">
+                <a href="${news.url}" target="_blank" style="font-size:13px; text-decoration:none; color:inherit; font-weight:500;">
+                    ${news.title.substring(0, 60)}...
+                </a>
+            </div>
+        `).join('');
+    } catch (err) { console.error("Crypto API Error", err); }
+}
+
+async function fetchDevToArticle() {
+    try {
+        const response = await fetch('https://dev.to/api/articles?tag=webdev&per_page=1');
+        const data = await response.json();
+        if(data[0]) populateCard(data[0], 'webdev', 'Dev.to');
+    } catch (err) { console.error("Dev.to API Error", err); }
+}
+
+async function fetchNewsAPI(query, category) {
+    try {
+        const response = await fetch(`https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&pageSize=1&apiKey=${NEWS_API_KEY}`);
+        const data = await response.json();
+        if(data.articles && data.articles[0]) {
+            populateCard(data.articles[0], category, 'NewsAPI');
+        }
+    } catch (err) { console.error(`NewsAPI Error (${category}):`, err); }
+}
+
+// --- UI Helper ---
+
+function populateCard(article, category, source) {
+    const card = document.querySelector(`.blog-card[data-category="${category}"]`);
+    if (!card) return;
+
+    // 1. IMPROVED IMAGE LOGIC: Check all possible image fields
+    const image = article.urlToImage ||          // NewsAPI field
+                  article.cover_image ||         // Dev.to main image
+                  article.social_image ||        // Dev.to fallback
+                  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80'; // High-quality fallback
+
+    const title = article.title;
+    const url = article.url;
+    const rawDate = article.publishedAt || article.published_at || article.published_timestamp;
+    const formattedDate = new Date(rawDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const description = article.description || "Read the latest updates regarding this topic.";
+
+    // Update the DOM
+    const imgElement = card.querySelector('img');
+    imgElement.src = image;
+    
+    // Add an error handler in case the API image link is broken
+    imgElement.onerror = function() {
+        this.src = 'https://via.placeholder.com/600x400?text=Image+Not+Found';
+    };
+
+    card.querySelector('h3').innerText = title;
+    card.querySelector('.post-date').innerText = `${category.toUpperCase()} | ${formattedDate}`;
+    card.querySelector('p:not(.post-date)').innerText = description.substring(0, 100) + '...';
+    card.querySelector('.read-more').href = url;
+}
+
+// Start the process
+document.addEventListener('DOMContentLoaded', updateAllSections);
